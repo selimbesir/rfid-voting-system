@@ -11,7 +11,6 @@ The purpose of the project is to allow only authorized users to vote, prevent th
 - 4x4 matrix keypad
 - 16x2 LCD with I2C backpack
 - PICkit 3 programmer
-- External crystal oscillator
 
 ## Ports Used
 
