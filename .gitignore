@@ -1,8 +1,17 @@
+# macOS
 .DS_Store
+
+# MPLAB X project files generated locally
+nbproject/
+Makefile
+
+# MPLAB X build output
 build/
 dist/
 debug/
 production/
+
+# Compiler/build artifacts
 *.elf
 *.hex
 *.map
@@ -17,5 +26,3 @@ production/
 *.cmf
 *.cof
 *.xml.*
-nbproject/private/
-nbproject/Makefile-local-*.mk
