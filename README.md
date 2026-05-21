@@ -2,7 +2,8 @@
 
 A PIC16F877A-based RFID voting system built in MPLAB X using the XC8 compiler. The system uses RFID cards to identify voters, a keypad to enter voting choices, and an I2C LCD to display messages, voting prompts, and results.
 
-The purpose of the project is to allow only authorized users to vote, prevent the same card from voting more than once, and keep the voting results saved even if the system loses voltage/power.
+The purpose of the project is to allow only authorized users to vote, prevent the same card from voting more than once, and keep the voting results saved even if the system loses power.
+
 
 ## Hardware Used
 
@@ -25,27 +26,27 @@ The purpose of the project is to allow only authorized users to vote, prevent th
 - PORTC is used for the LCD I2C connection and most RFID control/SPI signals.
 - PORTD is used for the RFID MISO signal.
   
-## Pin Connections
+### Pin Connections
 
 The system uses a PIC16F877A running at 4 MHz.
 
 ### LCD I2C Backpack
 
-- LCD `SCL` is connected to PIC pin `RC3`.
-- LCD `SDA` is connected to PIC pin `RC4`.
-- LCD `VCC` is connected to `5V`.
-- LCD `GND` is connected to `GND`.
+-  `SCL` is connected to PIC pin `RC3`.
+-  `SDA` is connected to PIC pin `RC4`.
+-  `VCC` is connected to `5V`.
+-  `GND` is connected to `GND`.
 - The LCD I2C address used in the code is `0x27`.
 
 ### MFRC522 RFID Reader
 
-- MFRC522 `RST` is connected to PIC pin `RC1`.
-- MFRC522 `SDA/SS/CS` is connected to PIC pin `RC2`.
-- MFRC522 `SCK` is connected to PIC pin `RC6`.
-- MFRC522 `MOSI` is connected to PIC pin `RC7`.
-- MFRC522 `MISO` is connected to PIC pin `RD0`.
-- MFRC522 `VCC` is powered from `3.3V` through a voltage regulator.
-- MFRC522 `GND` is connected to circuit `GND`.
+-  `RST` is connected to PIC pin `RC1`.
+-  `SDA/SS/CS` is connected to PIC pin `RC2`.
+-  `SCK` is connected to PIC pin `RC6`.
+-  `MOSI` is connected to PIC pin `RC7`.
+-  `MISO` is connected to PIC pin `RD0`.
+-  `VCC` is powered from `3.3V` through a voltage regulator.
+-  `GND` is connected to circuit `GND`.
 
 The PIC16F877A runs at `5V`, while the MFRC522 runs at `3.3V`. A voltage regulator is used to supply the RFID module, and resistor voltage dividers are used on the PIC to RFID signal lines that require level shifting. Make sure you have the voltage regulator and resistor dividers working properly or you will burn the RFID reader the second it receives 5v as it is very sensitive voltage wise.
 
@@ -65,11 +66,11 @@ PORTB internal weak pull-ups are enabled in the code for keypad input reading.
 ### Programmer
 
 - The project was programmed using a PICkit 3.
-- PICkit `VPP/MCLR` connects to the PIC `MCLR` pin.
-- PICkit `VDD` connects to the circuit `5V`.
-- PICkit `VSS` connects to circuit `GND`.
-- PICkit `PGD` connects to the PIC programming data pin.
-- PICkit `PGC` connects to the PIC programming clock pin.
+-  `VPP/MCLR` connects to the PIC `MCLR` pin.
+-  `VDD` connects to the circuit `5V`.
+-  `VSS` connects to circuit `GND`.
+-  `PGD` connects to the PIC programming data pin.
+-  `PGC` connects to the PIC programming clock pin.
 
 ## Project Behavior
 
