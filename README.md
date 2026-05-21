@@ -2,7 +2,7 @@
 
 A PIC16F877A-based RFID voting system built in MPLAB X using the XC8 compiler. The system uses RFID cards to identify voters, a keypad to enter voting choices, and an I2C LCD to display messages, voting prompts, and results.
 
-The purpose of the project is to allow only authorized users to vote, prevent the same card from voting more than once, and keep the voting results saved even if the system loses power.
+The purpose of the project is to allow only authorized users to vote, prevent the same card from voting more than once, and keep the voting results saved even if the system loses voltage/power.
 
 ## Hardware Used
 
